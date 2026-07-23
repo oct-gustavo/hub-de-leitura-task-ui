@@ -12,6 +12,9 @@ describe('Automação no Hub de Leitura', () => {
 
   it('Deve automatizar o Cadastro e Login', () => {
     cy.register()
+    cy.url().should('include', 'dashboard')
+    
     cy.login()
+    cy.url().should('include', 'dashboard')
   });
 });
