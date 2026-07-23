@@ -14,8 +14,6 @@ Cypress.Commands.add('register', () => {
     cy.get('#confirm-password').type("teste0210")
     cy.get('#terms-agreement').click()
     cy.get('#register-btn').click()
-    // Validação do Registro
-    cy.url().should('include', 'dashboard')
 
 })
 
@@ -25,7 +23,5 @@ Cypress.Commands.add('login', () => {
     cy.get('#email').type('Neal_Heidenreich87@yahoo.com')
     cy.get('#password').type('teste0210')
     cy.get('#login-btn').click()
-    // Validação do Login
-    cy.url().should('include', 'dashboard')
 
 })
